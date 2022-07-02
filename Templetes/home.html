@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Jovian Carrers</title>
+    <link rel="icon" href="https://web-development-1.bhaumiktripathi.repl.co/static/logo.png" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  </head>
+    
     <style>
       #banner {
         height: 500px;
@@ -13,10 +14,10 @@
         object-fit:cover;
         margin-bottom: 16px;
       }
-
     </style>
   </head>
   <body>
+    {% include 'navbar.html' %}
     <div style="font-Roboto">
       <h1 style='text-align:center; margin-bottom:25px; margin-top:25px;'>Jovian Carrers</h1>
       <img id='banner' width=100% height=400px object-fit: cover src= "https://web-development.bhaumiktripathi.repl.co/static/banner.jpg" >
@@ -30,7 +31,10 @@
             {% endfor %}
         </div>
       </div>
-      <button>contact us</button>
     </div>
+    <div class="text-center" style='padding-top: 25px;'>
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+    </div>
+      {% include 'footer.html' %}
   </body>
 </html>
